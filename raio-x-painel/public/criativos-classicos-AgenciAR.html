@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criativos Clássicos — AgenciAR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --brand-bg: #f8fafc;
+            --brand-text: #0f172a;
+            --brand-accent: #1e40af;
+            --brand-success: #10b981;
+            --card-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--brand-bg); color: var(--brand-text); line-height: 1.6; }
+
+        .page-header { text-align: center; padding: 60px 24px; background: #fff; border-bottom: 1px solid #e2e8f0; }
+        .page-header h1 { font-family: 'Inter Tight', sans-serif; font-size: 2.2rem; margin-bottom: 10px; color: var(--brand-accent); }
+        .page-header .subtitle { color: #64748b; font-size: 1rem; max-width: 600px; margin: 0 auto; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+        
+        .section-title { font-family: 'Inter Tight', sans-serif; font-size: 1.4rem; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+
+        .briefing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 60px; }
+        .briefing-card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: var(--card-shadow); border-left: 4px solid var(--brand-accent); }
+        .briefing-card .label { font-size: 0.7rem; text-transform: uppercase; font-weight: 800; color: #94a3b8; margin-bottom: 4px; }
+        .briefing-card .value { font-weight: 600; font-size: 0.9rem; }
+
+        .conceito { background: #fff; border-radius: 20px; padding: 40px; margin-bottom: 40px; box-shadow: var(--card-shadow); border-top: 5px solid var(--brand-accent); }
+        .conceito-header { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 30px; }
+        .conceito-header .numero { font-family: 'Inter Tight', sans-serif; font-size: 3rem; color: var(--brand-accent); opacity: 0.2; line-height: 1; }
+        .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .badge { font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; background: #f1f5f9; color: #64748b; text-transform: uppercase; }
+        .badge-accent { background: #eff6ff; color: #1e40af; }
+
+        .copy-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; border: 1px solid #f1f5f9; border-radius: 10px; overflow: hidden; }
+        .copy-table th, .copy-table td { text-align: left; padding: 14px 20px; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; }
+        .copy-table th { background: var(--brand-accent); color: #fff; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+        .copy-table td:first-child { font-weight: 700; color: #64748b; width: 140px; }
+
+        .visual-concept { display: grid; grid-template-columns: 280px 1fr; gap: 30px; background: #f8fafc; padding: 24px; border-radius: 12px; margin-bottom: 30px; }
+        .visual-concept .img-placeholder { width: 100%; height: 280px; background: #e2e8f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; text-align: center; }
+        .visual-concept .img-placeholder i { font-size: 2.5rem; color: #94a3b8; }
+        .visual-desc h4 { font-family: 'Inter Tight', sans-serif; font-size: 0.95rem; margin-bottom: 12px; }
+        .visual-desc ul { list-style: none; font-size: 0.85rem; color: #64748b; }
+        .visual-desc ul li { margin-bottom: 8px; display: flex; gap: 8px; }
+
+        .plataformas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+        .plat-card { background: #f1f5f9; padding: 12px 16px; border-radius: 8px; font-size: 0.8rem; }
+        .plat-card span { font-weight: 800; color: var(--brand-accent); display: block; margin-bottom: 4px; }
+
+        .checklist-card { background: #fff; padding: 30px; border-radius: 16px; box-shadow: var(--card-shadow); border-top: 4px solid var(--brand-success); margin-bottom: 60px; }
+        .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 20px; }
+        .check-item { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; font-weight: 600; color: #475569; }
+        .check-item i { color: var(--brand-success); }
+
+        footer { text-align: center; padding: 60px 24px; color: #94a3b8; font-size: 0.8rem; border-top: 1px solid #e2e8f0; }
+        
+        @media (max-width: 768px) { .visual-concept { grid-template-columns: 1fr; } .conceito-header { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        
+        <h2 class="section-title">🛸 Diagnóstico do Briefing</h2>
+        <div class="briefing-grid">
+            <div class="briefing-card"><div class="label">Cliente</div><div class="value">AgenciAR</div></div>
+            <div class="briefing-card"><div class="label">Público</div><div class="value">Donos/Diretores B2B RJ</div></div>
+            <div class="briefing-card"><div class="label">Dor</div><div class="value">Tráfego sem Lucro / Ansiedade</div></div>
+            <div class="briefing-card"><div class="label">Diferencial</div><div class="value">ROI como Linguagem / CRM</div></div>
+            <div class="briefing-card"><div class="label">Estética</div><div class="value">Editorial Premium</div></div>
+            <div class="briefing-card"><div class="label">Objetivo</div><div class="value">Diagnóstico DEP</div></div>
+        </div>
+
+        <!-- CONCEITO 1 -->
+        <div class="conceito" id="conceito-1">
+            <div class="conceito-header">
+                <div class="numero">01</div>
+                <div class="info">
+                    <h2>O Filtro de Tradução — Métricas em Dinheiro</h2>
+                    <div class="badges">
+                        <span class="badge badge-accent">Meta / LinkedIn</span>
+                        <span class="badge">Metáfora Visual</span>
+                        <span class="badge">Visual Hammer</span>
+                    </div>
+                </div>
+            </div>
+
+            <table class="copy-table">
+                <thead><tr><th>Elemento</th><th>Conteúdo</th></tr></thead>
+                <tbody>
+                    <tr><td>Headline</td><td>Pare de ler. Comece a lucrar.</td></tr>
+                    <tr><td>Texto Principal</td><td>Se você precisa de um dicionário para entender o relatório da sua agência, há algo errado. Na AgenciAR, falamos a única língua que importa: ROI.</td></tr>
+                    <tr><td>Descrição</td><td>Diagnóstico Especialista Grátis</td></tr>
+                    <tr><td>CTA</td><td>Solicitar Diagnóstico</td></tr>
+                </tbody>
+            </table>
+
+            <div class="visual-concept">
+                <div class="img-placeholder">
+                    <i class="fas fa-filter"></i>
+                    <span>Máquina de vidro traduzindo papéis em cristais de lucro</span>
+                </div>
+                <div class="visual-desc">
+                    <h4>🎨 Conceito Visual</h4>
+                    <ul>
+                        <li><i class="fas fa-camera"></i> <strong>Cena:</strong> Máquina industrial de vidro e aço polido. Relatórios cinzas entram de um lado, cifrões de esmeralda saem do outro.</li>
+                        <li><i class="fas fa-fill-drip"></i> <strong>Paleta:</strong> Navy Blue, Emerald Green e Grafite.</li>
+                        <li><i class="fas fa-quote-left"></i> <strong>Overlay:</strong> "Onde o ROI acontece."</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="plataformas-grid">
+                <div class="plat-card"><span>Meta Ads</span>Adaptar para Feed 4:5 com animação da máquina.</div>
+                <div class="plat-card"><span>LinkedIn</span>Foco em "Performance Corporativa" e seriedade técnica.</div>
+                <div class="plat-card"><span>Google Display</span>Banner limpo com o visual hammer em destaque.</div>
+            </div>
+        </div>
+
+        <!-- CONCEITO 2 -->
+        <div class="conceito" id="conceito-2">
+            <div class="conceito-header">
+                <div class="numero">02</div>
+                <div class="info">
+                    <h2>A 25ª Hora — Onde o Lucro Nunca Dorme</h2>
+                    <div class="badges">
+                        <span class="badge badge-accent">Meta Ads</span>
+                        <span class="badge">Hipérbole</span>
+                        <span class="badge">In Media Res</span>
+                    </div>
+                </div>
+            </div>
+
+            <table class="copy-table">
+                <thead><tr><th>Elemento</th><th>Conteúdo</th></tr></thead>
+                <tbody>
+                    <tr><td>Headline</td><td>Onde o lucro nunca dorme.</td></tr>
+                    <tr><td>Texto Principal</td><td>Enquanto você descansa, sua máquina de vendas continua acelerando. Operação 360º que gera previsibilidade, não apenas cliques.</td></tr>
+                    <tr><td>Descrição</td><td>Performance 24/7 para seu negócio</td></tr>
+                    <tr><td>CTA</td><td>Agendar Diagnóstico</td></tr>
+                </tbody>
+            </table>
+
+            <div class="visual-concept">
+                <div class="img-placeholder">
+                    <i class="fas fa-clock"></i>
+                    <span>Relógio de luxo com aro extra de neon verde</span>
+                </div>
+                <div class="visual-desc">
+                    <h4>🎨 Conceito Visual</h4>
+                    <ul>
+                        <li><i class="fas fa-camera"></i> <strong>Cena:</strong> Relógio de mesa clássico em escritório escuro. Um aro extra de neon verde (a 25ª hora) traz leads pulsando para o centro.</li>
+                        <li><i class="fas fa-fill-drip"></i> <strong>Paleta:</strong> Carbono, Neon Green e Midnight Blue.</li>
+                        <li><i class="fas fa-quote-left"></i> <strong>Overlay:</strong> "Lucro além do horário comercial."</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="plataformas-grid">
+                <div class="plat-card"><span>Stories</span>Uso de trilha ASMR de relógio e pulsação de luz.</div>
+                <div class="plat-card"><span>Feed</span>Imagem estática de alto contraste e luxo B2B.</div>
+            </div>
+        </div>
+
+        <div class="checklist-card">
+            <h2 class="section-title" style="margin-bottom:10px;"><i class="fas fa-vial"></i> Validação Clássica</h2>
+            <p style="font-size: 0.9rem; color: #64748b;">Garantindo que a arte serve à venda, não ao ego.</p>
+            <div class="checklist-grid">
+                <div class="check-item"><i class="fas fa-check"></i> Uma ideia por peça</div>
+                <div class="check-item"><i class="fas fa-check"></i> Visual Hammer (Impacto)</div>
+                <div class="check-item"><i class="fas fa-check"></i> Verbal Nail (Título Fixador)</div>
+                <div class="check-item"><i class="fas fa-check"></i> Mostre, não conte (Não-literal)</div>
+                <div class="check-item"><i class="fas fa-check"></i> Teste do Logo (Insubstituível)</div>
+                <div class="check-item"><i class="fas fa-check"></i> In Media Res (Sem Setup)</div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AgenciAR Marketing Digital via <a href="https://gui.marketing/?utm_source=esc-skills&utm_medium=deliverable&utm_campaign=conceitos-classicos&utm_content=footer">gui.marketing</a></p>
+        <p>Deliverable Etapa 6 — Fim do Pipeline /esc-start</p>
+    </footer>
+
+</body>
+</html>

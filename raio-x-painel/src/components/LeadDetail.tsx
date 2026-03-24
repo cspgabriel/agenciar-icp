@@ -3,13 +3,15 @@ import type { Lead } from '../types';
 import { ICPView } from './ICPView';
 import { generateICPForLead } from '../services/geminiService';
 import { supabase } from '../lib/supabase';
-import { ArrowLeft, Loader2, Target, Brain, BrainCircuit, RefreshCw } from 'lucide-react';
+import { ArrowLeft, Loader2, Target, Brain, BrainCircuit } from 'lucide-react';
 
 interface LeadDetailProps {
   lead: Lead;
   onBack: () => void;
   onICPSaved: (leadId: string, icp: any) => void;
 }
+
+import { GeneratingOverlay } from './GeneratingOverlay';
 
 export const LeadDetail: React.FC<LeadDetailProps> = ({ lead, onBack, onICPSaved }) => {
   const [isGenerating, setIsGenerating] = React.useState(false);
@@ -43,6 +45,8 @@ export const LeadDetail: React.FC<LeadDetailProps> = ({ lead, onBack, onICPSaved
 
   return (
     <div className="animate-fade-in max-w-7xl mx-auto space-y-6">
+      <GeneratingOverlay isGenerating={isGenerating} />
+      
       <button 
         onClick={onBack}
         className="flex items-center text-slate-500 hover:text-[var(--brand-accent)] transition-colors gap-2 font-medium"

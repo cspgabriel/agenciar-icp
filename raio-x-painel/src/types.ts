@@ -80,6 +80,35 @@ export interface ICPData {
     aplicacao: string;
     exemploCopy: string;
   }>;
+  googleAds?: {
+    estrategia: string;
+    keywordsPositivas: string[];
+    keywordsNegativas: string[];
+    anunciosRSA: Array<{
+      headline: string;
+      description: string;
+    }>;
+  };
+  landingPage?: {
+    framework: string;
+    hero: {
+      headline: string;
+      subheadline: string;
+      cta: string;
+    };
+    secoes: Array<{
+      titulo: string;
+      foco: string;
+    }>;
+  };
+  metaAds?: {
+    insight: string;
+    conceitos: Array<{
+      nome: string;
+      visual: string;
+      copyCurta: string;
+    }>;
+  };
   rawText?: string;
 }
 

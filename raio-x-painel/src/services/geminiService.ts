@@ -24,9 +24,9 @@ export async function generateICPForLead(lead: Lead): Promise<ICPData> {
     PONTUAÇÃO NO RAIO-X: ${lead.raiox_data?.result?.overallScore || 'N/A'}/100
   `;
 
-  const prompt = `Você é um estrategista de marketing especialista em "Ideal Customer Profile".
-  Seu objetivo é extrair um poderoso ICP com base nos dados captados do lead via formulário Raio-X.
-  Abaixo está o contexto do lead (escassez e informações limitadas são esperadas, use as dicas do assessment para inferir):
+  const prompt = `Você é um Estrategista-Chefe Growth (como o Guilherme Lacerda do método ESC).
+  Seu objetivo é extrair um Plano Integrado de Marketing Comercial com base nos dados captados do lead via formulário Raio-X.
+  Abaixo está o contexto do lead (escassez e informações limitadas são esperadas, use criatividade e lógica do método ESC para inferir gaps):
   
   ${leadContext}
   
@@ -74,7 +74,32 @@ export async function generateICPForLead(lead: Lead): Promise<ICPData> {
         "aplicacao": "Mostrar perda diária por falta do serviço",
         "exemploCopy": "Você perde 3 leads p/ dia sem o processo X"
       }
-    ]
+    ],
+    "googleAds": {
+      "estrategia": "Resumo tático de busca",
+      "keywordsPositivas": ["keyword exata 1", "keyword 2", "keyword 3"],
+      "keywordsNegativas": ["grátis", "curso", "como fazer"],
+      "anunciosRSA": [
+        {"headline": "Headline agressiva (máx 30c)", "description": "Dor + Solução direta"}
+      ]
+    },
+    "landingPage": {
+      "framework": "Ex: PAS (Problema, Agitação, Solução)",
+      "hero": {
+        "headline": "Headline poderosa prometendo resultado (H1)",
+        "subheadline": "Mecanismo de como o resultado é entregue",
+        "cta": "Baixar Agora / Agendar Sessão (foco no benefício)"
+      },
+      "secoes": [
+        {"titulo": "Seção Agitação Fricção", "foco": "Mostrar que entendemos o problema atual"}
+      ]
+    },
+    "metaAds": {
+      "insight": "Ângulo contraintuitivo para chamar atenção no feed",
+      "conceitos": [
+        {"nome": "O Elevador", "visual": "Vídeo B-roll escuro acelerado", "copyCurta": "Copy hook focada em reter os 3 primeiros segs"}
+      ]
+    }
   }
   
   Retorne SOMENTE um JSON válido. Não inclua \`\`\`json.`;

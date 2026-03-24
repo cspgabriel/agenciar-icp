@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criativos Meta Ads — AgenciAR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --brand-bg: #0f172a;
+            --brand-text: #f8fafc;
+            --brand-accent: #3b82f6;
+            --brand-success: #10b981;
+            --brand-font-title: 'Inter Tight', sans-serif;
+            --brand-font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--brand-font-body); background: var(--brand-bg); color: var(--brand-text); line-height: 1.6; }
+
+        .page-header { text-align: center; padding: 60px 24px; background: rgba(30, 41, 59, 0.4); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .page-header img { width: 180px; margin-bottom: 24px; filter: brightness(10); }
+        .page-header h1 { font-family: var(--brand-font-title); font-size: 2.2rem; margin-bottom: 10px; }
+        .page-header .subtitle { color: #94a3b8; font-size: 1rem; max-width: 600px; margin: 0 auto; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+        
+        .section-title { font-family: var(--brand-font-title); font-size: 1.4rem; margin-bottom: 20px; color: #fff; border-left: 4px solid var(--brand-accent); padding-left: 16px; }
+
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 60px; }
+        .summary-card { background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); position: relative; }
+        .summary-card .num { position: absolute; top: 12px; right: 12px; font-weight: 800; opacity: 0.1; font-size: 1.5rem; }
+        .summary-card h3 { font-size: 0.95rem; margin-bottom: 4px; }
+        .summary-card p { font-size: 0.75rem; color: #94a3b8; }
+
+        .conceito { background: #1e293b; border-radius: 20px; padding: 40px; margin-bottom: 40px; border: 1px solid rgba(255,255,255,0.05); }
+        .conceito-header { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 30px; }
+        .conceito-header .numero { font-family: var(--brand-font-title); font-size: 3rem; color: var(--brand-accent); opacity: 0.3; line-height: 1; }
+        .conceito-header h2 { font-size: 1.5rem; margin-bottom: 8px; }
+        .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+        .badge { font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; background: rgba(255,255,255,0.05); color: #94a3b8; text-transform: uppercase; }
+        .badge-accent { background: rgba(59, 130, 246, 0.1); color: #60a5fa; }
+
+        .copy-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; background: rgba(15, 23, 42, 0.3); border-radius: 10px; overflow: hidden; }
+        .copy-table th, .copy-table td { text-align: left; padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .copy-table th { background: var(--brand-accent); color: #fff; font-family: var(--brand-font-title); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+        .copy-table td:first-child { font-weight: 700; color: #94a3b8; width: 140px; }
+
+        .visual-concept { display: grid; grid-template-columns: 240px 1fr; gap: 30px; background: rgba(255,255,255,0.02); padding: 24px; border-radius: 12px; margin-bottom: 30px; }
+        .visual-concept .img-placeholder { width: 100%; height: 240px; background: #0f172a; border: 2px dashed #334155; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; text-align: center; padding: 20px; }
+        .visual-concept .img-placeholder i { font-size: 2rem; color: #334155; }
+        .visual-concept .desc h4 { font-family: var(--brand-font-title); font-size: 0.9rem; margin-bottom: 12px; color: #fff; }
+        .visual-concept .desc p { font-size: 0.85rem; color: #94a3b8; }
+
+        .adaptacoes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .adapt-card { background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; font-size: 0.75rem; }
+        .adapt-card h5 { color: var(--brand-accent); margin-bottom: 4px; }
+
+        footer { text-align: center; padding: 60px 24px; color: #64748b; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        a { color: inherit; text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            .visual-concept { grid-template-columns: 1fr; }
+            .adaptacoes-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        
+        <h2 class="section-title">Resumo dos Conceitos</h2>
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="num">01</div>
+                <h3>O Ralo de Dinheiro</h3>
+                <p>Feed 4:5 · Dor</p>
+            </div>
+            <div class="summary-card">
+                <div class="num">02</div>
+                <h3>Relatório ou Lucro?</h3>
+                <p>Stories 9:16 · Curiosidade</p>
+            </div>
+            <div class="summary-card">
+                <div class="num">03</div>
+                <h3>R$ 15M Depois...</h3>
+                <p>Feed 4:5 · Prova Social</p>
+            </div>
+            <div class="summary-card">
+                <div class="num">04</div>
+                <h3>A Traição das Agências</h3>
+                <p>Feed 1:1 · Pattern Interrupt</p>
+            </div>
+            <div class="summary-card">
+                <div class="num">05</div>
+                <h3>Lead de Estimação</h3>
+                <p>Reels 9:16 · Dramatização</p>
+            </div>
+            <div class="summary-card">
+                <div class="num">06</div>
+                <h3>Diagnóstico DEP</h3>
+                <p>Stories 9:16 · Oferta Direta</p>
+            </div>
+        </div>
+
+        <!-- CONCEITO 1 -->
+        <div class="conceito" id="conceito-1">
+            <div class="conceito-header">
+                <div class="numero">01</div>
+                <div class="info">
+                    <h2>O Ralo de Dinheiro — Metáfora do Desperdício</h2>
+                    <div class="badges">
+                        <span class="badge badge-accent">AgenciAR</span>
+                        <span class="badge">Feed 4:5 (Estático)</span>
+                        <span class="badge">Aversão à Perda</span>
+                    </div>
+                </div>
+            </div>
+
+            <table class="copy-table">
+                <thead><tr><th>Elemento</th><th>Conteúdo</th></tr></thead>
+                <tbody>
+                    <tr><td>Headline</td><td>Estanque o vazamento de lucro.</td></tr>
+                    <tr><td>Texto Principal</td><td>Cliques não pagam boletos. Sua agência entrega tráfego ou resultado real? Pare de queimar verba publicitária.</td></tr>
+                    <tr><td>Descrição</td><td>Diagnóstico Especialista Grátis</td></tr>
+                    <tr><td>CTA</td><td>Solicitar orçamento</td></tr>
+                </tbody>
+            </table>
+
+            <div class="visual-concept">
+                <div class="img-placeholder">
+                    <i class="fas fa-coins"></i>
+                    <span>Moeda de ouro vazando por filtro digital</span>
+                </div>
+                <div class="desc">
+                    <h4>Conceito Visual: Metáfora de Capital</h4>
+                    <p>Uma moeda 24k banhada a ouro escapando de um filtro digital translúcido. Fundo navy profundo com iluminação dramática no ouro. Representa a perda invisível de caixa em campanhas mal geridas.</p>
+                </div>
+            </div>
+
+            <div class="adaptacoes-grid">
+                <div class="adapt-card"><h5>Feed 1:1</h5><p>Foco macro na moeda e no filtro centralizado.</p></div>
+                <div class="adapt-card"><h5>Stories 9:16</h5><p>Câmera lenta da moeda caindo com overlay dinâmico.</p></div>
+                <div class="adapt-card"><h5>Overlay</h5><p>"Onde seu dinheiro escapa?"</p></div>
+            </div>
+        </div>
+
+        <!-- CONCEITO 3 (EXEMPLO DE PROVA SOCIAL) -->
+        <div class="conceito" id="conceito-3">
+            <div class="conceito-header">
+                <div class="numero">03</div>
+                <div class="info">
+                    <h2>R$ 15 Milhões Depois...</h2>
+                    <div class="badges">
+                        <span class="badge badge-accent">AgenciAR</span>
+                        <span class="badge">Feed 4:5 (Estático)</span>
+                        <span class="badge">Prova Social / Autoridade</span>
+                    </div>
+                </div>
+            </div>
+
+            <table class="copy-table">
+                <thead><tr><th>Elemento</th><th>Conteúdo</th></tr></thead>
+                <tbody>
+                    <tr><td>Headline</td><td>R$ 15 Milhões Depois...</td></tr>
+                    <tr><td>Texto Principal</td><td>Já geramos mais de 15 milhões em faturamento para nossos clientes no RJ. Sua empresa será a próxima?</td></tr>
+                    <tr><td>Descrição</td><td>Parceiro Oficial Google Premier</td></tr>
+                    <tr><td>CTA</td><td>Saiba mais</td></tr>
+                </tbody>
+            </table>
+
+            <div class="visual-concept">
+                <div class="img-placeholder">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Especialistas analisando dados premium</span>
+                </div>
+                <div class="desc">
+                    <h4>Conceito Visual: Fotografia de Elite</h4>
+                    <p>Close de mãos analisando touch screen com dados financeiros complexos. Reflexo das luzes do Rio de Janeiro na janela ao fundo, transmitindo sucesso local e autoridade técnica.</p>
+                </div>
+            </div>
+
+            <div class="adaptacoes-grid">
+                <div class="adapt-card"><h5>Status</h5><p>Foco no número 15M pulsando em verde.</p></div>
+                <div class="adapt-card"><h5>Banner</h5><p>Layout horizontal com logos Google e Meta destacados.</p></div>
+                <div class="adapt-card"><h5>Overlay</h5><p>"Performance Validada no RJ"</p></div>
+            </div>
+        </div>
+
+        <!-- CONCEITO 6 (EXEMPLO DE OFERTA) -->
+        <div class="conceito" id="conceito-6">
+            <div class="conceito-header">
+                <div class="numero">06</div>
+                <div class="info">
+                    <h2>Diagnóstico DEP 24h</h2>
+                    <div class="badges">
+                        <span class="badge badge-accent">AgenciAR</span>
+                        <span class="badge">Stories 9:16</span>
+                        <span class="badge">Escassez / Reciprocidade</span>
+                    </div>
+                </div>
+            </div>
+
+            <table class="copy-table">
+                <thead><tr><th>Elemento</th><th>Conteúdo</th></tr></thead>
+                <tbody>
+                    <tr><td>Headline</td><td>Diagnóstico DEP Grátis.</td></tr>
+                    <tr><td>Texto Principal</td><td>Apenas 5 horários para Auditoria de Performance nesta semana. Receba seu plano de escala sem custo.</td></tr>
+                    <tr><td>Descrição</td><td>Especialistas Meta/Google</td></tr>
+                    <tr><td>CTA</td><td>Agendar agora</td></tr>
+                </tbody>
+            </table>
+
+            <div class="visual-concept">
+                <div class="img-placeholder">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Convite digital flutuante 3D</span>
+                </div>
+                <div class="desc">
+                    <h4>Conceito Visual: Minimalismo Executivo</h4>
+                    <p>Um convite de calendário digital minimalista flutuando em um ambiente mesh gradient. Ícones de vidro do Instagram e Google orbitam a peça, sugerindo uma reunião estratégica de elite.</p>
+                </div>
+            </div>
+
+            <div class="adaptacoes-grid">
+                <div class="adapt-card"><h5>Instagram</h5><p>Direct message automatizada para quem responder.</p></div>
+                <div class="adapt-card"><h5>Reels</h5><p>Vídeo curto mostrando o dashboard que será entregue.</p></div>
+                <div class="adapt-card"><h5>Overlay</h5><p>"Sua Escala Começa Aqui"</p></div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AgenciAR Marketing Digital via <a href="https://gui.marketing/?utm_source=esc-skills&utm_medium=deliverable&utm_campaign=conceitos-meta&utm_content=footer">gui.marketing</a></p>
+        <p>Deliverable do Workflow /esc-start · Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>

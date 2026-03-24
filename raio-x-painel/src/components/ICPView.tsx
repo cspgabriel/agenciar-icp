@@ -1,6 +1,6 @@
 import React from 'react';
 import type { ICPData, Lead } from '../types';
-import { ExternalLink, RefreshCw } from 'lucide-react';
+import { RefreshCw, Lock, Eye } from 'lucide-react';
 
 interface ICPViewProps {
   lead: Lead;
@@ -10,7 +10,9 @@ interface ICPViewProps {
 }
 
 export const ICPView: React.FC<ICPViewProps> = ({ lead, onRegenerate, isGenerating }) => {
-  const publicUrl = `/icp/${lead.id}`;
+  const teaserUrl = `/icp/${lead.id}`;
+  const vipUrl = `/icp/${lead.id}?secure=true`;
+  const iframeUrl = `/icp/${lead.id}?secure=true&admin=true`;
 
   return (
     <div className="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-200 flex flex-col animate-fade-in">
@@ -36,13 +38,22 @@ export const ICPView: React.FC<ICPViewProps> = ({ lead, onRegenerate, isGenerati
             Regerar ICP
           </button>
           <a 
-            href={publicUrl} 
+            href={vipUrl} 
             target="_blank" 
             rel="noreferrer"
-            className="flex items-center gap-2 bg-[#864df9] hover:bg-[#6c39d3] text-white font-bold px-4 py-1.5 rounded-lg text-sm transition-all shadow-lg"
+            className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold px-4 py-1.5 rounded-lg text-sm transition-all shadow-lg"
+            title="Link Completo com Senha"
           >
-            <ExternalLink size={14} />
-            Abrir Link do Cliente em Tela Cheia
+            <Lock size={14} /> VIP
+          </a>
+          <a 
+            href={teaserUrl} 
+            target="_blank" 
+            rel="noreferrer"
+            className="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-4 py-1.5 border border-slate-300 rounded-lg text-sm transition-all shadow-sm"
+            title="Link de Degustação Borrado"
+          >
+            <Eye size={14} /> Teaser
           </a>
         </div>
       </div>
@@ -57,7 +68,7 @@ export const ICPView: React.FC<ICPViewProps> = ({ lead, onRegenerate, isGenerati
           </div>
         )}
         <iframe 
-          src={publicUrl} 
+          src={iframeUrl} 
           className="w-full h-[800px] border-none"
           title={`ICP de ${lead.company_url || lead.name}`}
         />

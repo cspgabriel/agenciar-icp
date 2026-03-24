@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import type { Lead } from '../types';
 import { LeadDetail } from '../components/LeadDetail';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-import { Database, Search, Filter, Loader2, ArrowRight, Cpu, ExternalLink } from 'lucide-react';
+import { Database, Search, Filter, Loader2, ArrowRight, Cpu, Lock, Eye } from 'lucide-react';
 
 export default function InternalPanel() {
   const [leads, setLeads] = useState<Lead[]>([]);
@@ -106,8 +106,6 @@ export default function InternalPanel() {
               {filteredLeads.map(lead => {
                 const score = lead.raiox_data?.result?.overallScore || 0;
                 const hasICP = !!lead.icp_data;
-                const publicUrl = `${window.location.origin}/icp/${lead.id}`;
-
                 return (
                   <div key={lead.id} className="glass-card rounded-2xl p-6 flex flex-col justify-between group">
                     <div onClick={() => setSelectedLead(lead)} className="cursor-pointer flex-1">
@@ -140,14 +138,20 @@ export default function InternalPanel() {
                         {hasICP ? '⭐ ICP Gerado' : '⏳ Sem ICP'}
                       </span>
 
-                      {/* Link público para o cliente */}
+                      {/* Links públicos para o cliente */}
                       {hasICP && (
-                        <a href={publicUrl} target="_blank" rel="noreferrer"
-                          onClick={e => e.stopPropagation()}
-                          title="Abrir link público do cliente"
-                          className="flex items-center gap-1.5 text-xs font-bold text-[var(--brand-accent)] hover:underline">
-                          <ExternalLink size={14} /> Enviar ao Cliente
-                        </a>
+                        <div className="flex flex-col gap-1.5" onClick={e => e.stopPropagation()}>
+                          <a href={`${window.location.origin}/icp/${lead.id}?secure=true`} target="_blank" rel="noreferrer"
+                            title="Link protegido por senha"
+                            className="flex items-center gap-1.5 text-[11px] font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-2.5 py-1.5 rounded-md transition-all shadow-sm">
+                            <Lock size={12} /> VIP (Senha: agenciar)
+                          </a>
+                          <a href={`${window.location.origin}/icp/${lead.id}`} target="_blank" rel="noreferrer"
+                            title="Link aberto com módulos borrados"
+                            className="flex items-center gap-1.5 text-[11px] font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 border border-slate-200 px-2.5 py-1.5 rounded-md transition-colors">
+                            <Eye size={12} /> Teaser (Degustação)
+                          </a>
+                        </div>
                       )}
 
                       <ArrowRight size={20} onClick={() => setSelectedLead(lead)}

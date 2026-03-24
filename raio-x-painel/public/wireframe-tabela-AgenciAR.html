@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe LP — AgenciAR</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --brand-bg: #f8fafc;
+            --brand-text: #0f172a;
+            --brand-accent: #1e3a8a;
+            --brand-success: #10b981;
+            --brand-lilac: #e2e8f0;
+            --brand-font-title: 'Inter Tight', sans-serif;
+            --brand-font-body: 'Inter', sans-serif;
+            --card-shadow: 0 4px 20px rgba(30, 58, 138, .08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--brand-font-body);
+            background: var(--brand-bg);
+            color: var(--brand-text);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        .page-header { text-align: center; padding: 60px 24px 40px; background: #fff; border-bottom: 1px solid #e2e8f0; }
+        .page-header h1 { font-family: var(--brand-font-title); font-size: 2.2rem; color: var(--brand-accent); margin-bottom: 12px; }
+        .page-header .subtitle { font-size: 1rem; color: #64748b; max-width: 600px; margin: 0 auto; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 24px 80px; }
+        .brand-badge { display: inline-block; padding: 4px 16px; border-radius: 30px; font-weight: 700; font-size: .8rem; background: var(--brand-accent); color: #fff; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
+
+        .wireframe-wrap { overflow-x: auto; border-radius: 12px; box-shadow: var(--card-shadow); background: #fff; margin-bottom: 50px; border: 1px solid #e2e8f0; }
+        table.wireframe-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+        table.wireframe-table thead th { font-family: var(--brand-font-title); font-weight: 700; font-size: .85rem; text-transform: uppercase; padding: 16px; background: var(--brand-accent); color: #fff; text-align: left; }
+        table.wireframe-table tbody td { padding: 16px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+        table.wireframe-table tbody tr:hover { background: #f8fafc; }
+        table.wireframe-table tbody td:first-child { font-weight: 700; color: var(--brand-accent); min-width: 160px; }
+        table.wireframe-table tbody td:nth-child(2) { font-weight: 600; color: #64748b; font-size: .75rem; text-transform: uppercase; }
+
+        .section-separator td { background: #eff6ff !important; font-family: var(--brand-font-title) !important; font-weight: 800 !important; color: #1e40af !important; font-size: .85rem !important; text-transform: uppercase !important; padding: 12px 16px !important; border-bottom: 2px solid #bfdbfe !important; }
+
+        .defesa-card { background: #fff; border-radius: 12px; padding: 40px; box-shadow: var(--card-shadow); border-top: 6px solid var(--brand-accent); }
+        .defesa-card h2 { font-family: var(--brand-font-title); font-size: 1.5rem; margin-bottom: 24px; color: var(--brand-accent); }
+        .defesa-card h3 { font-family: var(--brand-font-title); font-size: 1.1rem; margin: 24px 0 12px; color: #1e293b; }
+        .defesa-card p, .defesa-card li { font-size: .95rem; color: #334155; margin-bottom: 10px; }
+        .defesa-card ul { padding-left: 20px; }
+        .tag-framework { display: inline-block; padding: 6px 16px; border-radius: 8px; font-size: .8rem; font-weight: 800; background: var(--brand-success); color: #fff; margin-bottom: 20px; }
+
+        .page-footer { text-align: center; padding: 40px; background: #fff; border-top: 1px solid #e2e8f0; color: #64748b; font-size: .9rem; }
+    </style>
+</head>
+
+<body>
+
+    <header class="page-header">
+        <h1>Wireframe Landing Page — AgenciAR</h1>
+        <p class="subtitle">Estrutura estratégica focada em conversão de leads qualificados (SQL) para marketing de performance.</p>
+    </header>
+
+    <div class="container">
+        <span class="brand-badge">AgenciAR · Performance 360</span>
+
+        <div class="wireframe-wrap">
+            <table class="wireframe-table">
+                <thead>
+                    <tr>
+                        <th>Seção</th>
+                        <th>Framework</th>
+                        <th>Elemento</th>
+                        <th>Conteúdo</th>
+                        <th>Notas para Designer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="section-separator"><td colspan="5">ABERTURA & IMPACTO</td></tr>
+                    <tr>
+                        <td>Hero Section</td>
+                        <td>Hook</td>
+                        <td>Headline (H1)</td>
+                        <td><strong>Sua empresa fatura menos do que deveria no digital?</strong></td>
+                        <td>Fundo escuro/navy. Tipografia bold massiva. Foco na dor financeira.</td>
+                    </tr>
+                    <tr>
+                        <td>Hero Section</td>
+                        <td>Value Prop</td>
+                        <td>Subheadline</td>
+                        <td>Recupere o lucro perdido com estratégias de performance 360º validadas por mais de 250 empresas no RJ.</td>
+                        <td>Texto de apoio focado em autoridade e localidade.</td>
+                    </tr>
+                    <tr>
+                        <td>Hero Section</td>
+                        <td>Call to Action</td>
+                        <td>CTA Primário</td>
+                        <td>[Solicitar Diagnóstico Gratuito]</td>
+                        <td>Botão de destaque em verde (#10b981). Efeito de brilho.</td>
+                    </tr>
+                    <tr>
+                        <td>Hero Section</td>
+                        <td>Trust Signals</td>
+                        <td>Trust Bar</td>
+                        <td>Logos: Google Partner, Meta Business Partner, +15M Faturados, +250 Clientes.</td>
+                        <td>Barra horizontal limpa. Logos monocromáticos.</td>
+                    </tr>
+
+                    <tr class="section-separator"><td colspan="5">PROBLEMA (ROB)</td></tr>
+                    <tr>
+                        <td>Conscientização</td>
+                        <td>Problem</td>
+                        <td>Headline (H2)</td>
+                        <td>O "buraco negro" das agências comuns.</td>
+                        <td>Design que evoca "desperdício" ou "confusão".</td>
+                    </tr>
+                    <tr>
+                        <td>Conscientização</td>
+                        <td>Problem</td>
+                        <td>Corpo</td>
+                        <td>A maioria das agências foca em CPC e impressões. Mas de que adianta tráfego se ele não vira lucro real no seu bolso?</td>
+                        <td>Uso estratégico de espaço negativo.</td>
+                    </tr>
+
+                    <tr class="section-separator"><td colspan="5">AMPLIFICAÇÃO (EXTENSÃO DA DOR)</td></tr>
+                    <tr>
+                        <td>Agitação</td>
+                        <td>Amplify</td>
+                        <td>Headline (H2)</td>
+                        <td>Quanto custa cada lead perdido hoje?</td>
+                        <td>Uso de dados ou ícones de perda.</td>
+                    </tr>
+                    <tr>
+                        <td>Agitação</td>
+                        <td>Amplify</td>
+                        <td>Cards de Dor</td>
+                        <td>1. Vendas que morrem no CRM mal configurado.<br>2. Verba queimada em keywords erradas.<br>3. Relatórios que ocultam prejuízo.</td>
+                        <td>Grid de 3 colunas. Estilo "Pain points".</td>
+                    </tr>
+
+                    <tr class="section-separator"><td colspan="5">SOLUÇÃO (A CURA)</td></tr>
+                    <tr>
+                        <td>Apresentação</td>
+                        <td>Solution</td>
+                        <td>Headline (H2)</td>
+                        <td>O Método AgenciAR de Escala Real.</td>
+                        <td>Transição para cores positivas (verde/branco).</td>
+                    </tr>
+                    <tr>
+                        <td>Apresentação</td>
+                        <td>Solution</td>
+                        <td>Lista de Valor</td>
+                        <td>• Auditoria Técnica Profunda<br>• Funil 360 (Google + Meta + LinkedIn)<br>• Tracking de Lucro via CRM<br>• Suporte Prioritário RJ.</td>
+                        <td>Checkmarks estilizados. Ícones modernos de tech.</td>
+                    </tr>
+
+                    <tr class="section-separator"><td colspan="5">TESTEMUNHO (PROVA SOCIAL)</td></tr>
+                    <tr>
+                        <td>Autoridade</td>
+                        <td>Testimony</td>
+                        <td>Headline (H2)</td>
+                        <td>Quem parou de desperdiçar e começou a lucrar.</td>
+                        <td>Foco em rostos e logos reais.</td>
+                    </tr>
+                    <tr>
+                        <td>Autoridade</td>
+                        <td>Testimony</td>
+                        <td>Cases Grid</td>
+                        <td>3 Cases reais focados em ROI (ex: Incremento de 300% em 6 meses).</td>
+                        <td>Cards com foto do cliente + depoimento em aspas.</td>
+                    </tr>
+
+                    <tr class="section-separator"><td colspan="5">OFERECIMENTO & RESPOSTA</td></tr>
+                    <tr>
+                        <td>Oferta</td>
+                        <td>Offer</td>
+                        <td>Offer Box</td>
+                        <td>Diagnóstico Estratégico de Performance Gratuito.</td>
+                        <td>Seção de destaque visual máximo. Estilo "Voucher" ou "Presente".</td>
+                    </tr>
+                    <tr>
+                        <td>Conversão</td>
+                        <td>Response</td>
+                        <td>Formulário</td>
+                        <td>Campos: Nome, E-mail, WhatsApp, Site, Verba Mensal, Principal Desafio.</td>
+                        <td>Lead Scoring integrado via dropdowns.</td>
+                    </tr>
+                    <tr>
+                        <td>Conversão</td>
+                        <td>Response</td>
+                        <td>CTA do Form</td>
+                        <td>[Verificar Minha Estratégia Agora]</td>
+                        <td>Botão massivo em verde vibrante.</td>
+                    </tr>
+
+                    <tr class="section-separator"><td colspan="5">FOOTER</td></tr>
+                    <tr>
+                        <td>Footer</td>
+                        <td>-</td>
+                        <td>Info</td>
+                        <td>© 2026 AgenciAR · Parceiro Oficial Google · Rio de Janeiro, RJ.</td>
+                        <td>Minimalista. Links institucionais.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="defesa-card">
+            <span class="tag-framework">P.A.S.T.O.R.</span>
+            <h2>Defesa do Wireframe</h2>
+            <h3>1. Por que P.A.S.T.O.R.?</h3>
+            <p>O framework P.A.S.T.O.R. foi escolhido por ser o mais eficiente em vendas consultivas B2B onde a barreira principal é a <strong>desconfiança</strong>. Ele permite que primeiro validemos a dor do cliente, mostremos que entendemos o problema dele e apresentemos provas antes de pedir qualquer ação.</p>
+            <h3>2. Adequação ao Contexto</h3>
+            <ul>
+                <li><strong>Message Match:</strong> Alinhado 100% com os anúncios de "Agência de Performance" criados na Etapa 2.</li>
+                <li><strong>Fricção Reduzida:</strong> A oferta do Diagnóstico Gratuito é de baixo atrito para leads que estão frustrados com fornecedores atuais.</li>
+                <li><strong>Lead Scoring:</strong> O formulário captura a verba e o desafio, permitindo que o time comercial priorize os leads com perfil AgenciAR Real.</li>
+            </ul>
+            <h3>3. Resultado Esperado</h3>
+            <p>Espera-se uma taxa de conversão acima de 8% para tráfego qualificado de fundo de funil, com uma qualidade de lead (SQL) superior devido à segmentação no formulário.</p>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <p>AgenciAR Marketing Digital — Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>
